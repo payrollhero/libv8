@@ -13,7 +13,7 @@ module Libv8
 
     def self.load!
       File.open(Pathname(__FILE__).dirname.join('.location.yml')) do |f|
-        YAML.load f
+        YAML.unsafe_load f
       end
     end
 
